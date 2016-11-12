@@ -1,0 +1,99 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			 xmlns:tools="http://schemas.android.com/tools"
+			 android:layout_width="match_parent"
+			 android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+			 tools:context="com.ayursha.herbals.ui.fragment.AboutFragment">
+
+	<android.support.v7.widget.CardView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_centerVertical="true"
+		android:background="@color/white"
+		android:layout_marginTop="5dp"
+		android:elevation="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+		<LinearLayout
+            style="@style/StyleAboutUsLinearLayout">
+
+			<ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/ic_name" />
+			<TextView
+				android:id="@+id/txt_name"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+                style="@style/StyleAboutUsText"
+				android:text="Name"/>
+
+		</LinearLayout>
+
+
+            <include layout="@layout/include_divider"/>
+
+        <LinearLayout
+            android:id="@+id/layout_address"
+            style="@style/StyleAboutUsLinearLayout"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_address"/>
+            <TextView
+                android:id="@+id/txt_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/StyleAboutUsText"
+                android:text="Address"/>
+
+        </LinearLayout>
+
+            <include layout="@layout/include_divider"/>
+
+        <LinearLayout
+            android:id="@+id/layout_call"
+            style="@style/StyleAboutUsLinearLayout">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_phone" />
+            <TextView
+                android:id="@+id/txt_mobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/StyleAboutUsText"
+                android:text="9703323201"/>
+
+        </LinearLayout>
+
+            <include layout="@layout/include_divider"/>
+
+        <LinearLayout
+            android:id="@+id/layout_fb_url"
+            style="@style/StyleAboutUsLinearLayout">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_facebook" />
+
+            <TextView
+                android:id="@+id/txt_fb_url"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/StyleAboutUsText"
+                android:text="#Fb Url"/>
+
+        </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

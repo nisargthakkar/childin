@@ -1,0 +1,23 @@
+<resources>
+	<string name="app_name">Ayursha Herbals</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="openDrawer">open_drawer</string>
+    <string name="closeDrawer">close_drawer</string>
+
+	<string name="home">Our Products</string>
+	<string name="about">About Us</string>
+	<string name="rate">Rate Us</string>
+
+    <string name="enter_name">Your name</string>
+    <string name="enter_mobile">Your mobile</string>
+
+    <string name="we_will_call_you">Dont\'t worry we will call you.Please submit your details.</string>
+
+    <string-array name="titles">
+        <item>Our Products</item>
+        <item>About Us</item>
+        <item>Rate Us</item>
+    </string-array>
+</resources>
