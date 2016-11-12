@@ -3,8 +3,6 @@
 var IndexModel = require('../models/index'),
     DBConnector = require('../lib/dbconnector');
 
-
-
 module.exports = function (router) {
 
     var model = new IndexModel();

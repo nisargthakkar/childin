@@ -62,7 +62,6 @@
 			"enabled": false
 		},
 
-
         "static": {
             "module": {
                 "arguments": [ "path:./.build" ]
