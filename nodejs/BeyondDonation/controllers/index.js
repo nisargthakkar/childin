@@ -1,6 +1,8 @@
 'use strict';
 
-var IndexModel = require('../models/index');
+var IndexModel = require('../models/index'),
+    DBConnector = require('../lib/dbconnector');
+
 
 
 module.exports = function (router) {
@@ -9,9 +11,9 @@ module.exports = function (router) {
 
     router.get('/', function (req, res) {
         
-        
-        res.render('index', model);
-        
+        DBConnector.query('SELECT * FROM DONOR', function(err, model){
+            res.render('index', model);
+        });
         
     });
 
