@@ -5,7 +5,7 @@ android {
 	compileSdkVersion 25
 	buildToolsVersion "24.0.3"
 	defaultConfig {
-		applicationId "com.ayursha.herbals"
+		applicationId "com.help.childin"
 		minSdkVersion 19
 		targetSdkVersion 25
 		versionCode 1
