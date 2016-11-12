@@ -25,8 +25,8 @@ module.exports = function (router) {
         });
     });
 
-    router.post('/:id', function (req, res){
-      DonorModel.insertDonor(req.params.id, req.body.info, function(err, model){
+    router.post('/', function (req, res){
+      DonorModel.insertDonor(req.body.info, function(err, model){
         if(!err)
           res.sendStatus(200);
         else {

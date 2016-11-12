@@ -1,21 +1,29 @@
+'use strict';
+
 var mysql = require('mysql');
+var connection;
+
 module.exports = {
+    createConnection: function(){
+      connection = mysql.createConnection({
+          host: 'localhost',
+          user: 'root',
+          password: '',
+          database : 'childin'
+      });
+
+      connection.connect();
+    },
+
     query: function(query, callback) {
-        var connection = mysql.createConnection({
-            host: 'localhost',
-            user: 'root',
-            password: 'root',
-            database : 'childin'
-        });
-
-        connection.connect();
-
         connection.query(query, function (err, rows, fields) {
-            connection.end();
             if (err) return callback(err);
-
             return callback(null, rows);
-        })
+        });
+    },
+
+    destroyConnection: function(){
+        connection.close();
     }
 
 }
