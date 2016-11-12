@@ -1,6 +1,6 @@
 'use strict';
 
-var ChildModel = require('../models/users/child.js');
+var ChildModel = require('../../models/users/child.js');
 
 
 module.exports = function (router) {
@@ -10,7 +10,7 @@ module.exports = function (router) {
           if(!err)
             res.json(model);
           else {
-            res.send(500, {err : "Can't add child details"})
+            res.send(500, err)
           }
         });
     });
@@ -20,7 +20,7 @@ module.exports = function (router) {
           if(!err)
             res.json(model);
           else {
-            res.send(500, {err : "Can't add child details"})
+            res.send(500, err)
           }
         });
     });
@@ -30,7 +30,7 @@ module.exports = function (router) {
         if(!err)
           res.sendStatus(200);
         else {
-          res.send(500, {err : "Can't add child details"});
+          res.send(500, err);
         }
       });
 

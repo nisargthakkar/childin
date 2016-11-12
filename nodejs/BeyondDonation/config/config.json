@@ -4,7 +4,8 @@
     "express": {
         "view cache": false,
         "view engine": "js",
-        "views": "path:./.build/templates"
+        "views": "path:./.build/templates",
+        "mountpath": "/api"
     },
     
 
@@ -57,6 +58,9 @@
             }
         },
         
+		"appsec": {
+			"enabled": false
+		},
 
         "static": {
             "module": {
