@@ -12,7 +12,7 @@ module.exports = {
     getAllDonor: function(callback) {
         DBConnector.query("SELECT * FROM Donor", callback);
     },
-    insertDonor: function(Name, GenderType, MaritalStatusType, DOB, Address, TelephoneNo, MobileNo, Email, WeddingAnniversaryDate, DonatedOn, isActive, callback) {
-        DBConnector.query("INSERT INTO Donor (Name, GenderType, MaritalStatusType, DOB, Address, TelephoneNo, MobileNo, Email, WeddingAniversayDate, DonatedOn, isActive) VALUES ('" + Name + "', '" + GenderType + "', '" + MaritalStatusType + "', '" + DOB + "', '" + Address + "', '" + TelephoneNo + "', '" + MobileNo + "', '" + Email + "', '" + WeddingAnniversaryDate + "', '" + DonatedOn + "', '" + isActive + "')", callback);
+    insertDonor: function(Name, GenderType, MaritalStatusType, DOB, Address, TelephoneNo, MobileNo, Email, WeddingAnniversaryDate, isActive, callback) {
+        DBConnector.query("INSERT INTO Donor (Name, GenderType, MaritalStatusType, DOB, Address, TelephoneNo, MobileNo, Email, WeddingAniversayDate, isActive) VALUES ('" + Name + "', '" + GenderType + "', '" + MaritalStatusType + "', '" + DOB + "', '" + Address + "', '" + TelephoneNo + "', '" + MobileNo + "', '" + Email + "', '" + WeddingAnniversaryDate + "', '" + isActive + "')", callback);
     }
 }
