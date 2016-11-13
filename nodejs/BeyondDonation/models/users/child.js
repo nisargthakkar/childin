@@ -9,7 +9,7 @@ module.exports = {
     getAllChild: function(callback) {
         DBConnector.query("SELECT * FROM Child", callback);;
     },
-    insertChild: function(Name, GenderType, DOB, CreatedOn, isActive, Description, callback) {
-        DBConnector.query("INSERT INTO Child (Name, GenderType, DOB, CreatedOn, isActive, Description) VALUES ('" + Name + "', '" + GenderType + "', '" + DOB + "', '" + CreatedOn + "', '" + isActive + "', '" + Description + "')", callback);
+    insertChild: function(Name, GenderType, DOB, Description, callback) {
+        DBConnector.query("INSERT INTO Child (Name, GenderType, DOB, Description) VALUES ('" + Name + "', '" + GenderType + "', '" + DOB  + "', '" + Description + "')", callback);
     }
 }
