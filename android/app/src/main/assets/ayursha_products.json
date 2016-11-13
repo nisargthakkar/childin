@@ -1,0 +1,39 @@
+{
+  "products":[
+    {
+      "id": "1",
+      "name": "Silk and Shine 200G",
+      "description": "New Ayursha herbal silk & shine hair pack is a hair essential for damage protection. It controls frizz, eases out tangles and reduces breakage to give you silky, shiny hair. This product is designed to be so lightweight that you don't feel it at all once applied. It has a mild fragrance which is inspired by fine fragrances.",
+      "price": "₹470",
+      "videourl":"I2TDbA41QtY"
+    },
+    {
+      "id": "2",
+      "name": "Soft & Shine Face Massage Oil 200G",
+      "description": "Ayursha Herbal soft & shine face massage oil smoothens skin and reduces tan. Repairs damaged skin and removes dark circles thus improving skin glow.The usage of this herbal oil is pretty easy. One just needs to take a few drops of the oil and apply it on the dark spot affected section on the face and the neck. Then one needs to massage it in the upwards direction and leave it on the skin for a few hours. It has been documented that the best results can be obtained if it is applied before going to sleep at night, so that the oil gets the entire night to penetrate into the skin and reach every affected skin tissue. The product is 100% ayurvedic and is dermatologically tested.",
+      "price": "₹470",
+      "videourl":"T7fjgDrtVss"
+    },
+    {
+      "id": "3",
+      "name": "Long & Strong Hair Oil",
+      "description": "The new ayursha herbal long and strong hair oil energises and stimulates the scalp to help control hair loss that is caused due to breakage. The keratin helps restore hair to its healthy-looking state and the shampoo leaves your hair looking fuller and thicker. It's great to use regularly and you'll definitely see better hair growth. Get this bottle now and give your hair a luscious, confident bounce.",
+      "price": "₹450",
+      "videourl":"5e8YQjrfKf4"
+    },
+    {
+      "id": "4",
+      "name": "Herbal Clear Skin 100G",
+      "description": "Ayursha herbal clear skin face pack will give you bright and flawless skin tone with regular use, it helps fighting pimples causing germs and reduces excess oil.Face pack helps reducing tan and dark circles resulting in fairer skin.",
+      "price": "₹450",
+      "videourl":"sgdqFv-COrk"
+    },
+    {
+      "id": "5",
+      "name": "Fail & Glow 100G",
+      "description": "Ayursha Fair & glow face pack advanced multi vitamin cream is perfect for all skin types. This cream gives you instant fairness and glow and is very safe to use. Its advanced sun protection formula shields your skin from harmful UVA and UVB radiations. With regular use, dark patches and spots on the skin start getting lighter.",
+      "price": "₹450",
+      "videourl":"1BBXtUg7C58"
+    }
+  ]
+}
