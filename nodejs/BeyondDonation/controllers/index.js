@@ -9,9 +9,9 @@ module.exports = function (router) {
 
     router.get('/', function (req, res) {
         
-        DBConnector.query('SELECT * FROM DONOR', function(err, model){
+        // DBConnector.query('SELECT * FROM DONOR', function(err, model){
             res.render('index', model);
-        });
+        // });
         
     });
 
