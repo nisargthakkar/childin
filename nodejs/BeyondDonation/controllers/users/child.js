@@ -26,9 +26,11 @@ module.exports = function (router) {
     });
 
     router.post('/', function (req, res){
-      ChildModel.insertChild(req.body.Name, req.body.GenderType, req.body.MaritalStatusType, req.body.DOB, req.body.CreatedOn, req.body.isActive, function(err, model){
-        if(!err)
-          res.sendStatus(200);
+      ChildModel.insertChild(req.body.Name, req.body.GenderType, req.body.DOB, req.body.CreatedOn, req.body.isActive, req.body.Description, function(err, model){
+        if(!err){
+          res.status(200);
+          res.send({SUCCESS: true, ChildId: model.insertId, message: 'Child Registered Successfully'});
+        }
         else {
           res.send(500, err);
         }
