@@ -9,7 +9,7 @@ module.exports = {
           host: 'localhost',
           user: 'root',
           password: 'root',
-          database : 'childin'
+          database : 'ChildIn'
       });
 
       connection.connect();

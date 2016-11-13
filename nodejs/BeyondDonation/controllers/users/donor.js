@@ -26,7 +26,7 @@ module.exports = function (router) {
     });
 
     router.post('/', function (req, res){
-      DonorModel.insertDonor(req.body.info, function(err, model){
+      DonorModel.insertDonor(req.body.Name, req.body.GenderType, req.body.MaritalStatusType, req.body.DOB, req.body.Address, req.body.TelephoneNo, req.body.MobileNo, req.body.Email, req.body.WeddingAniversayDate, req.body.DonatedOn, req.body.isActive, function(err, model){
         if(!err)
           res.sendStatus(200);
         else {

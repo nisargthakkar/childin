@@ -25,8 +25,8 @@ module.exports = function (router) {
         });
     });
 
-    router.post('/:id', function (req, res){
-      ChildModel.insertChild(req.params.id, req.body.info, function(err, model){
+    router.post('/', function (req, res){
+      ChildModel.insertChild(req.body.Name, req.body.GenderType, req.body.MaritalStatusType, req.body.DOB, req.body.CreatedOn, req.body.isActive, function(err, model){
         if(!err)
           res.sendStatus(200);
         else {
