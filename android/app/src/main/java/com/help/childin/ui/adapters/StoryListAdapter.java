@@ -2,6 +2,7 @@ package com.help.childin.ui.adapters;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -10,27 +11,24 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.help.childin.R;
-import com.help.childin.models.DonationModel;
-import com.help.childin.models.NotificationModel;
-import com.help.childin.models.ProductModel;
-import com.help.childin.ui.activity.TestActivity;
-import com.help.childin.utils.AppConstants;
-import com.help.childin.utils.Helper;
-
-import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import com.help.childin.R;
+import com.help.childin.models.ProductModel;
+import com.help.childin.ui.activity.StoryReaderActivity;
+import com.help.childin.ui.activity.TestActivity;
+import com.help.childin.utils.AppConstants;
+import com.help.childin.utils.Helper;
 
-public class MyDonationsListAdapter extends RecyclerView.Adapter<MyDonationsListAdapter.ViewHolder> {
+public class StoryListAdapter extends RecyclerView.Adapter<StoryListAdapter.ViewHolder> {
 
-    private List<DonationModel> donationModels;
+    private List<ProductModel> storyModels;
     private Context context;
 
-    public MyDonationsListAdapter(Context context, ArrayList<DonationModel> donationModels) {
-        this.donationModels = donationModels;
+    public StoryListAdapter(Context context, List<ProductModel> storyModels) {
+        this.storyModels = storyModels;
         this.context = context;
     }
 
@@ -38,29 +36,29 @@ public class MyDonationsListAdapter extends RecyclerView.Adapter<MyDonationsList
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int position) {
         View view = LayoutInflater
                 .from(viewGroup.getContext())
-                .inflate(R.layout.item_donations_list,viewGroup,false);
+                .inflate(R.layout.item_story_list,viewGroup,false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, int position) {
 
-        DonationModel donationModel = donationModels.get(position);
-        viewHolder.txtStoryName.setText(donationModel.donationMsg);
+        ProductModel storyModel = storyModels.get(position);
+        viewHolder.txtStoryName.setText(storyModel.name);
         viewHolder.txtStoryName.setTypeface(Helper.getMyTypeFace(context));
 
-        //viewHolder.imgProduct.setImageResource(storyModel.imageId);
-        viewHolder.txtProductPrice.setText(donationModel.donationBody);
+        viewHolder.imgProduct.setImageResource(storyModel.imageId);
+        viewHolder.txtProductPrice.setText("Price: "+storyModel.price);
         viewHolder.txtProductPrice.setTypeface(Helper.getMyTypeFace(context));
 
-        viewHolder.cardItemView.setTag(donationModel);
+        viewHolder.cardItemView.setTag(storyModel);
 
         viewHolder.cardItemView.setOnClickListener(clickListener);
     }
 
     @Override
     public int getItemCount() {
-        return donationModels.size();
+        return storyModels.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
@@ -70,6 +68,9 @@ public class MyDonationsListAdapter extends RecyclerView.Adapter<MyDonationsList
 
         @BindView(R.id.card_item_view)
         CardView cardItemView;
+
+        @BindView(R.id.img_product)
+        ImageView imgProduct;
 
         @BindView(R.id.txt_product_price)
         TextView txtProductPrice;
@@ -84,10 +85,10 @@ public class MyDonationsListAdapter extends RecyclerView.Adapter<MyDonationsList
     View.OnClickListener clickListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            //DonationModel donationModel = (DonationModel) view.getTag();
-           // Intent intent = new Intent(context, TestActivity.class);
-            //intent.putExtra(AppConstants.EXTRA_PRODUCT_MODEL,donationModel);
-            //context.startActivity(intent);
+            ProductModel productModel = (ProductModel) view.getTag();
+            Intent intent = new Intent(context, TestActivity.class);
+            intent.putExtra(AppConstants.EXTRA_PRODUCT_MODEL,productModel);
+            context.startActivity(intent);
         }
     };
 

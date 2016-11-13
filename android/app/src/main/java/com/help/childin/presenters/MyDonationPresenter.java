@@ -1,6 +1,7 @@
 package com.help.childin.presenters;
 
 import com.google.gson.Gson;
+import com.help.childin.models.DonationResponseModel;
 import com.help.childin.models.NotificationModel;
 import com.help.childin.models.NotificationResponseModel;
 import com.help.childin.models.ProductModel;
@@ -31,15 +32,15 @@ public class MyDonationPresenter {
         try {
             String jsonString = helper.loadJsonFromAssets("donations_dummy.json");
             Gson gson = new Gson();
-            NotificationResponseModel notificationResponseModel = gson.fromJson(jsonString, NotificationResponseModel.class);
-            if (notificationResponseModel != null && notificationResponseModel.notificationModels != null){
+            DonationResponseModel donationResponseModel = gson.fromJson(jsonString, DonationResponseModel.class);
+            if (donationResponseModel != null && donationResponseModel.donationModels != null){
                 /*ArrayList<NotificationModel> notificationModels = new ArrayList<>();
                 for (int i = 0; i < notificationModels.products.size(); i++) {
                     ProductModel productModel = notificationModels.products.get(i);
                     productModel.imageId = imageIds[i];
                     productModels.add(productModel);
                 }*/
-                myDonationFragment.onNotificationsReceived(notificationResponseModel.notificationModels);
+                myDonationFragment.onDonationsReceived(donationResponseModel.donationModels);
             }
         } catch (IOException e) {
             e.printStackTrace();

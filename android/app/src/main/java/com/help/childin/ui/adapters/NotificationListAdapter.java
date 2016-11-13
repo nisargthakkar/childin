@@ -83,10 +83,10 @@ public class NotificationListAdapter extends RecyclerView.Adapter<NotificationLi
     View.OnClickListener clickListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            ProductModel productModel = (ProductModel) view.getTag();
+            /*NotificationModel notificationModel = (NotificationModel) view.getTag();
             Intent intent = new Intent(context, TestActivity.class);
             intent.putExtra(AppConstants.EXTRA_PRODUCT_MODEL,productModel);
-            context.startActivity(intent);
+            context.startActivity(intent);*/
         }
     };
 
