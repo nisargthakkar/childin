@@ -36,7 +36,7 @@ module.exports = function (router) {
     });
 
     router.post('/', function (req, res){
-      DonationModel.insertDonation(req.body.DonorId, req.body.DonatedTo, req.body.Amount, req.body.DonatedOn, function(err, model){
+      DonationModel.insertDonation(req.body.DonorId, req.body.ChildId, req.body.Amount, req.body.DonatedOn, function(err, model){
         if(!err)
           res.sendStatus(200);
         else {
