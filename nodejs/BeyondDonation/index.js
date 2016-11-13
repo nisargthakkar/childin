@@ -3,6 +3,7 @@
 var express = require('express');
 var kraken = require('kraken-js');
 var dbconnector = require('./lib/dbconnector');
+var authenticare = require('./lib/authenticate');
 
 var options, app;
 
