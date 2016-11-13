@@ -9,8 +9,11 @@
 	<string name="home">Home</string>
 	<string name="notifications">Notifications</string>
 	<string name="my_donations">My Donations</string>
+    <string name="about_us">About Us</string>
     <string name="settings">Settings</string>
     <string name="logout">Logout</string>
+
+    <string name="donate_now">Donate Now</string>
 
     <string name="enter_name">Your name</string>
     <string name="enter_mobile">Your mobile</string>
@@ -18,8 +21,9 @@
     <string name="we_will_call_you">Dont\'t worry we will call you.Please submit your details.</string>
 
     <string-array name="titles">
-        <item>Home</item>
-        <item>Notifications</item>
-        <item>My Donations</item>
+        <item>@string/home</item>
+        <item>@string/notifications</item>
+        <item>@string/my_donations</item>
+        <item>@string/about_us</item>
     </string-array>
 </resources>

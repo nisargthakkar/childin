@@ -12,9 +12,7 @@ import android.view.ViewGroup;
 
 import com.help.childin.R;
 import com.help.childin.models.NotificationModel;
-import com.help.childin.models.ProductModel;
 import com.help.childin.presenters.NotificationPresenter;
-import com.help.childin.ui.adapters.MyDonationsListAdapter;
 import com.help.childin.ui.adapters.NotificationListAdapter;
 
 import java.util.ArrayList;

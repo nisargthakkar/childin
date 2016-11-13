@@ -4,32 +4,28 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.help.childin.R;
-import com.help.childin.models.DonationModel;
-import com.help.childin.presenters.MyDonationPresenter;
-import com.help.childin.ui.adapters.MyDonationsListAdapter;
+import com.help.childin.models.ProductModel;
+import com.help.childin.presenters.HomePresenter;
 
 import java.util.ArrayList;
 
-import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MyDonationFragment extends Fragment {
+public class HomeFragment extends Fragment {
 
 	private OnFragmentInteractionListener listener;
-	private MyDonationPresenter myDonationPresenter;
+	private HomePresenter homePresenter;
 
-    @BindView(R.id.recycler_category)
-    RecyclerView recyclerCategory;
+    //@BindView(R.id.recycler_category)
+   // RecyclerView recyclerCategory;
 
-	public static MyDonationFragment newInstance() {
-		return new MyDonationFragment();
+	public static HomeFragment newInstance() {
+		return new HomeFragment();
 	}
 
 	@Override
@@ -40,16 +36,16 @@ public class MyDonationFragment extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 							 Bundle savedInstanceState) {
-		View view = inflater.inflate(R.layout.fragment_donations, container, false);
+		View view = inflater.inflate(R.layout.fragment_home, container, false);
         ButterKnife.bind(this,view);
-		myDonationPresenter = new MyDonationPresenter(this);
+		homePresenter = new HomePresenter(this);
 		return view;
 	}
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        myDonationPresenter.loadProducts();
+        homePresenter.loadProducts();
     }
 
     @Override
@@ -69,14 +65,13 @@ public class MyDonationFragment extends Fragment {
 		listener = null;
 	}
 
-	public void onDonationsReceived(ArrayList<DonationModel> donationModels) {
-		LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
-		recyclerCategory.setLayoutManager(linearLayoutManager);
-		MyDonationsListAdapter myDonationsListAdapter = new MyDonationsListAdapter(getActivity(), donationModels);
-		recyclerCategory.setAdapter(myDonationsListAdapter);
-	}
-
 	public interface OnFragmentInteractionListener {
 	}
 
+	public void onProductListReceived(ArrayList<ProductModel> storyModels){
+		/*LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
+		recyclerCategory.setLayoutManager(linearLayoutManager);
+		StoryListAdapter storyListAdapter = new StoryListAdapter(getActivity(), storyModels);
+		recyclerCategory.setAdapter(storyListAdapter);*/
+	}
 }

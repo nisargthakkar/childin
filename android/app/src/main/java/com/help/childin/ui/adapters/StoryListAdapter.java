@@ -6,25 +6,25 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.help.childin.R;
-import com.help.childin.models.NotificationModel;
+import com.help.childin.models.ProductModel;
 import com.help.childin.utils.Helper;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class NotificationListAdapter extends RecyclerView.Adapter<NotificationListAdapter.ViewHolder> {
+public class StoryListAdapter extends RecyclerView.Adapter<StoryListAdapter.ViewHolder> {
 
-    private List<NotificationModel> notificationModels;
+    private List<ProductModel> storyModels;
     private Context context;
 
-    public NotificationListAdapter(Context context, ArrayList<NotificationModel> notificationModels) {
-        this.notificationModels = notificationModels;
+    public StoryListAdapter(Context context, List<ProductModel> storyModels) {
+        this.storyModels = storyModels;
         this.context = context;
     }
 
@@ -32,29 +32,29 @@ public class NotificationListAdapter extends RecyclerView.Adapter<NotificationLi
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int position) {
         View view = LayoutInflater
                 .from(viewGroup.getContext())
-                .inflate(R.layout.item_notification_list,viewGroup,false);
+                .inflate(R.layout.item_story_list,viewGroup,false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, int position) {
 
-        NotificationModel notificationModel = notificationModels.get(position);
-        viewHolder.txtStoryName.setText(notificationModel.notificationMsg);
+        ProductModel storyModel = storyModels.get(position);
+        viewHolder.txtStoryName.setText(storyModel.name);
         viewHolder.txtStoryName.setTypeface(Helper.getMyTypeFace(context));
 
-        //viewHolder.imgProduct.setImageResource(storyModel.imageId);
-        viewHolder.txtProductPrice.setText(notificationModel.notificationBody);
+        viewHolder.imgProduct.setImageResource(storyModel.imageId);
+        viewHolder.txtProductPrice.setText("Price: "+storyModel.price);
         viewHolder.txtProductPrice.setTypeface(Helper.getMyTypeFace(context));
 
-        viewHolder.cardItemView.setTag(notificationModel);
+        viewHolder.cardItemView.setTag(storyModel);
 
         viewHolder.cardItemView.setOnClickListener(clickListener);
     }
 
     @Override
     public int getItemCount() {
-        return notificationModels.size();
+        return storyModels.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
@@ -64,6 +64,9 @@ public class NotificationListAdapter extends RecyclerView.Adapter<NotificationLi
 
         @BindView(R.id.card_item_view)
         CardView cardItemView;
+
+        @BindView(R.id.img_product)
+        ImageView imgProduct;
 
         @BindView(R.id.txt_product_price)
         TextView txtProductPrice;
@@ -78,10 +81,7 @@ public class NotificationListAdapter extends RecyclerView.Adapter<NotificationLi
     View.OnClickListener clickListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            /*NotificationModel notificationModel = (NotificationModel) view.getTag();
-            Intent intent = new Intent(context, TestActivity.class);
-            intent.putExtra(AppConstants.EXTRA_PRODUCT_MODEL,productModel);
-            context.startActivity(intent);*/
+
         }
     };
 
