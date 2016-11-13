@@ -1,5 +1,5 @@
 <resources>
-	<string name="app_name">Child In</string>
+    <string name="app_name">Child In</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -9,8 +9,13 @@
 	<string name="home">Home</string>
 	<string name="notifications">Notifications</string>
 	<string name="my_donations">My Donations</string>
+    <string name="about_us">About Us</string>
+    <string name="my_children">My Children</string>
+    <string name="my_b_children">Browse Children</string>
     <string name="settings">Settings</string>
     <string name="logout">Logout</string>
+
+    <string name="donate_now">Donate Now</string>
 
     <string name="enter_name">Your name</string>
     <string name="enter_mobile">Your mobile</string>
@@ -18,8 +23,31 @@
     <string name="we_will_call_you">Dont\'t worry we will call you.Please submit your details.</string>
 
     <string-array name="titles">
-        <item>Home</item>
-        <item>Notifications</item>
-        <item>My Donations</item>
+        <item>@string/home</item>
+        <item>@string/notifications</item>
+        <item>@string/my_donations</item>
+        <item>@string/about_us</item>
     </string-array>
+
+
+    //PayPal ChildIn
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_name">Name</string>
+    <string name="hint_gender">Gender</string>
+    <string name="hint_dob">Date Of Birth</string>
+    <string name="hint_address">Address</string>
+    <string name="hint_mobileno">Mobile Number</string>
+    <string name="btn_login">LOGIN</string>
+    <string name="btn_register">REGISTER</string>
+    <string name="btn_link_to_register">Not a member? Sign up now.</string>
+    <string name="btn_link_to_login">Already registred! Login Me.</string>
+    <string name="btn_link_to_donate">Donate</string>
+    <string name="welcome">Welcome</string>
+    <string name="btn_logout">LOGOUT</string>
+    <string name="name">Fullname</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

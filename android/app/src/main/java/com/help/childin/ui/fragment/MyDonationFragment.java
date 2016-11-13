@@ -11,12 +11,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.help.childin.R;
-import com.help.childin.models.NotificationModel;
-import com.help.childin.models.ProductModel;
-import com.help.childin.presenters.HomePresenter;
+import com.help.childin.models.DonationModel;
 import com.help.childin.presenters.MyDonationPresenter;
 import com.help.childin.ui.adapters.MyDonationsListAdapter;
-import com.help.childin.ui.adapters.StoryListAdapter;
 
 import java.util.ArrayList;
 
@@ -72,10 +69,10 @@ public class MyDonationFragment extends Fragment {
 		listener = null;
 	}
 
-	public void onNotificationsReceived(ArrayList<NotificationModel> notificationModels) {
+	public void onDonationsReceived(ArrayList<DonationModel> donationModels) {
 		LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
 		recyclerCategory.setLayoutManager(linearLayoutManager);
-		MyDonationsListAdapter myDonationsListAdapter = new MyDonationsListAdapter(getActivity(), notificationModels);
+		MyDonationsListAdapter myDonationsListAdapter = new MyDonationsListAdapter(getActivity(), donationModels);
 		recyclerCategory.setAdapter(myDonationsListAdapter);
 	}
 

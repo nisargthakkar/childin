@@ -1,20 +1,15 @@
 package com.help.childin.ui.adapters;
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.help.childin.R;
 import com.help.childin.models.NotificationModel;
-import com.help.childin.models.ProductModel;
-import com.help.childin.ui.activity.TestActivity;
-import com.help.childin.utils.AppConstants;
 import com.help.childin.utils.Helper;
 
 import java.util.ArrayList;
@@ -83,10 +78,10 @@ public class NotificationListAdapter extends RecyclerView.Adapter<NotificationLi
     View.OnClickListener clickListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            ProductModel productModel = (ProductModel) view.getTag();
+            /*NotificationModel notificationModel = (NotificationModel) view.getTag();
             Intent intent = new Intent(context, TestActivity.class);
             intent.putExtra(AppConstants.EXTRA_PRODUCT_MODEL,productModel);
-            context.startActivity(intent);
+            context.startActivity(intent);*/
         }
     };
 
