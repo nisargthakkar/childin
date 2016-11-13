@@ -8,7 +8,7 @@ module.exports = {
       connection = mysql.createConnection({
           host: 'localhost',
           user: 'root',
-          password: 'root',
+          password: '',
           database : 'ChildIn'
       });
 
