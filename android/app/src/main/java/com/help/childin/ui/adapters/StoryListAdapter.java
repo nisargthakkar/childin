@@ -1,8 +1,6 @@
 package com.help.childin.ui.adapters;
 
 import android.content.Context;
-import android.content.Intent;
-import android.graphics.Typeface;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -11,16 +9,14 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.help.childin.R;
+import com.help.childin.models.ProductModel;
+import com.help.childin.utils.Helper;
+
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import com.help.childin.R;
-import com.help.childin.models.ProductModel;
-import com.help.childin.ui.activity.StoryReaderActivity;
-import com.help.childin.ui.activity.TestActivity;
-import com.help.childin.utils.AppConstants;
-import com.help.childin.utils.Helper;
 
 public class StoryListAdapter extends RecyclerView.Adapter<StoryListAdapter.ViewHolder> {
 
@@ -85,10 +81,7 @@ public class StoryListAdapter extends RecyclerView.Adapter<StoryListAdapter.View
     View.OnClickListener clickListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            ProductModel productModel = (ProductModel) view.getTag();
-            Intent intent = new Intent(context, TestActivity.class);
-            intent.putExtra(AppConstants.EXTRA_PRODUCT_MODEL,productModel);
-            context.startActivity(intent);
+
         }
     };
 

@@ -1,10 +1,7 @@
 package com.help.childin.ui.activity;
 
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -13,22 +10,21 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import com.help.childin.R;
-import com.help.childin.presenters.MyDonationPresenter;
 import com.help.childin.ui.fragment.AboutFragment;
 import com.help.childin.ui.fragment.HomeFragment;
 import com.help.childin.ui.fragment.MyDonationFragment;
 import com.help.childin.ui.fragment.NotificationFragment;
-import com.help.childin.utils.AppConstants;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity implements HomeFragment.OnFragmentInteractionListener,
-		NotificationFragment.OnFragmentInteractionListener,MyDonationFragment.OnFragmentInteractionListener
+		NotificationFragment.OnFragmentInteractionListener,MyDonationFragment.OnFragmentInteractionListener,
+        AboutFragment.OnFragmentInteractionListener
 		{
 
 	@BindView(R.id.toolbar)
@@ -47,6 +43,7 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnFr
 	private static final String TAG_HOME = "home";
 	private static final String TAG_NOTIFICATIONS = "notifications";
 	private static final String TAG_DONATIONS = "donations";
+            private static final String TAG_ABOUT_US = "about";
 	public static String CURRENT_TAG = TAG_HOME;
 
 	// toolbar titles respected to selected nav menu item
@@ -62,8 +59,7 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnFr
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_home);
 		ButterKnife.bind(this);
-		// initializing navigation menu
-		toolbar = (Toolbar) findViewById(R.id.toolbar);
+
 		setSupportActionBar(toolbar);
 
 		// load toolbar titles from string resources
@@ -91,9 +87,6 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnFr
 		// just close the navigation drawer
 		if (getSupportFragmentManager().findFragmentByTag(CURRENT_TAG) != null) {
 			drawer.closeDrawers();
-
-			// show or hide the fab button
-			toggleFab();
 			return;
 		}
 
@@ -119,9 +112,6 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnFr
 			mHandler.post(mPendingRunnable);
 		}
 
-		// show or hide the fab button
-		toggleFab();
-
 		//Closing drawer on item click
 		drawer.closeDrawers();
 
@@ -141,6 +131,9 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnFr
 			case 2:
 				MyDonationFragment myDonationFragment = new MyDonationFragment();
 				return myDonationFragment;
+            case 3:
+                AboutFragment aboutFragment = new AboutFragment();
+                return aboutFragment;
 			default:
 				return new HomeFragment();
 		}
@@ -177,6 +170,10 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnFr
 						navItemIndex = 2;
 						CURRENT_TAG = TAG_DONATIONS;
 						break;
+                    case R.id.action_about_us:
+                        navItemIndex = 3;
+                        CURRENT_TAG = TAG_ABOUT_US;
+                        break;
 					/*case R.id.nav_about_us:
 						// launch new intent instead of loading fragment
 						startActivity(new Intent(MainActivity.this, AboutUsActivity.class));
@@ -244,58 +241,6 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnFr
 		}
 
 		super.onBackPressed();
-	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-
-		/*// show menu only when home fragment is selected
-		if (navItemIndex == 0) {
-			getMenuInflater().inflate(R.menu.main, menu);
-		}
-
-		// when fragment is notifications, load the menu created for notifications
-		if (navItemIndex == 3) {
-			getMenuInflater().inflate(R.menu.notifications, menu);
-		}*/
-		return true;
-	}
-
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
-		/*int id = item.getItemId();
-
-		//noinspection SimplifiableIfStatement
-		if (id == R.id.action_logout) {
-			Toast.makeText(getApplicationContext(), "Logout user!", Toast.LENGTH_LONG).show();
-			return true;
-		}
-
-		// user is in notifications fragment
-		// and selected 'Mark all as Read'
-		if (id == R.id.action_mark_all_read) {
-			Toast.makeText(getApplicationContext(), "All notifications marked as read!", Toast.LENGTH_LONG).show();
-		}
-
-		// user is in notifications fragment
-		// and selected 'Clear All'
-		if (id == R.id.action_clear_notifications) {
-			Toast.makeText(getApplicationContext(), "Clear all notifications!", Toast.LENGTH_LONG).show();
-		}*/
-
-		return super.onOptionsItemSelected(item);
-	}
-
-	// show or hide the fab
-	private void toggleFab() {
-		//if (navItemIndex == 0)
-		//	fab.show();
-		//else
-		//	fab.hide();
 	}
 
 

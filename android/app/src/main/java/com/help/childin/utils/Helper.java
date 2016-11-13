@@ -6,6 +6,8 @@ import android.graphics.Typeface;
 import java.io.IOException;
 import java.io.InputStream;
 
+import retrofit2.Retrofit;
+
 /**
  * Created by ramakrishna on 11/5/16.
  */
@@ -47,6 +49,22 @@ public class Helper {
         //        "Raleway-Bold.ttf");
         return Typeface.createFromAsset(context.getAssets(),
                 "SourceSansPro-Semibold.ttf");
+    }
+
+    public static Retrofit getRetrofitObj() {
+
+        /*OkHttpClient okHttpClient = new OkHttpClient();
+        //okHttpClient.connectTimeoutMillis(30, TimeUnit.SECONDS);
+        //okHttpClient.setReadTimeout(60, TimeUnit.SECONDS);
+
+        return new Retrofit.Builder()
+                .baseUrl(AppConstants.ROOT_URL)
+                //.addConverterFactory(GsonConverterFactory.create())
+                //.client(okHttpClient)
+                .build();*/
+        return new Retrofit.Builder()
+                .baseUrl(AppConstants.ROOT_URL)
+                .build();
     }
 
 }

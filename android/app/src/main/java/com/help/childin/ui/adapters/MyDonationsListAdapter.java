@@ -1,21 +1,15 @@
 package com.help.childin.ui.adapters;
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.help.childin.R;
 import com.help.childin.models.DonationModel;
-import com.help.childin.models.NotificationModel;
-import com.help.childin.models.ProductModel;
-import com.help.childin.ui.activity.TestActivity;
-import com.help.childin.utils.AppConstants;
 import com.help.childin.utils.Helper;
 
 import java.util.ArrayList;

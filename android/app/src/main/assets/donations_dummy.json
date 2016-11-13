@@ -1,79 +1,79 @@
 {
   "DonationData":[
     {
-      "NotificationId": "10",
-      "NotificationMsg": "500rs Donated successfully",
-      "NotificationBody": "Happy birthday my lovely dady....love you so much.Thank you for sending sweet gifts to me."
+      "DonationId": "10",
+      "DonationMsg": "500rs Donated successfully",
+      "DonationBody": "Happy birthday my lovely dady....love you so much.Thank you for sending sweet gifts to me."
     },
     {
-      "NotificationId": "11",
-      "NotificationMsg": "1000rs Donated successfully",
-      "NotificationBody": "Happy birthday to great donar"
+      "DonationId": "11",
+      "DonationMsg": "1000rs Donated successfully",
+      "DonationBody": "Happy birthday to great donar"
     },
     {
-      "NotificationId": "12",
-      "NotificationMsg": "2000rs Donated successfully",
-      "NotificationBody": "We wish you happy married life.Thank you."
+      "DonationId": "12",
+      "DonationMsg": "2000rs Donated successfully",
+      "DonationBody": "We wish you happy married life.Thank you."
     },
     {
-      "NotificationId": "13",
-      "NotificationMsg": "2500rs Donated",
-      "NotificationBody": "Thank you for adding new child.We are happy to see you link this.."
+      "DonationId": "13",
+      "DonationMsg": "2500rs Donated",
+      "DonationBody": "Thank you for adding new child.We are happy to see you link this.."
     },
     {
-      "NotificationId": "14",
-      "NotificationMsg": "3900rs Donated successfully",
-      "NotificationBody": "Thank you for sending your founds again.Thank you for sending sweet gifts to me."
+      "DonationId": "14",
+      "DonationMsg": "3900rs Donated successfully",
+      "DonationBody": "Thank you for sending your founds again.Thank you for sending sweet gifts to me."
     },
     {
-      "NotificationId": "10",
-      "NotificationMsg": "500rs Donated successfully",
-      "NotificationBody": "Happy birthday my lovely dady....love you so much.Thank you for sending sweet gifts to me."
+      "DonationId": "10",
+      "DonationMsg": "500rs Donated successfully",
+      "DonationBody": "Happy birthday my lovely dady....love you so much.Thank you for sending sweet gifts to me."
     },
     {
-      "NotificationId": "11",
-      "NotificationMsg": "1000rs Donated successfully",
-      "NotificationBody": "Happy birthday to great donar"
+      "DonationId": "11",
+      "DonationMsg": "1000rs Donated successfully",
+      "DonationBody": "Happy birthday to great donar"
     },
     {
-      "NotificationId": "12",
-      "NotificationMsg": "2000rs Donated successfully",
-      "NotificationBody": "We wish you happy married life.Thank you."
+      "DonationId": "12",
+      "DonationMsg": "2000rs Donated successfully",
+      "DonationBody": "We wish you happy married life.Thank you."
     },
     {
-      "NotificationId": "13",
-      "NotificationMsg": "2500rs Donated",
-      "NotificationBody": "Thank you for adding new child.We are happy to see you link this.."
+      "DonationId": "13",
+      "DonationMsg": "2500rs Donated",
+      "DonationBody": "Thank you for adding new child.We are happy to see you link this.."
     },
     {
-      "NotificationId": "14",
-      "NotificationMsg": "3900rs Donated successfully",
-      "NotificationBody": "Thank you for sending your founds again.Thank you for sending sweet gifts to me."
+      "DonationId": "14",
+      "DonationMsg": "3900rs Donated successfully",
+      "DonationBody": "Thank you for sending your founds again.Thank you for sending sweet gifts to me."
     },
     {
-      "NotificationId": "10",
-      "NotificationMsg": "500rs Donated successfully",
-      "NotificationBody": "Happy birthday my lovely dady....love you so much.Thank you for sending sweet gifts to me."
+      "DonationId": "10",
+      "DonationMsg": "500rs Donated successfully",
+      "DonationBody": "Happy birthday my lovely dady....love you so much.Thank you for sending sweet gifts to me."
     },
     {
-      "NotificationId": "11",
-      "NotificationMsg": "1000rs Donated successfully",
-      "NotificationBody": "Happy birthday to great donar"
+      "DonationId": "11",
+      "DonationMsg": "1000rs Donated successfully",
+      "DonationBody": "Happy birthday to great donar"
     },
     {
-      "NotificationId": "12",
-      "NotificationMsg": "2000rs Donated successfully",
-      "NotificationBody": "We wish you happy married life.Thank you."
+      "DonationId": "12",
+      "DonationMsg": "2000rs Donated successfully",
+      "DonationBody": "We wish you happy married life.Thank you."
     },
     {
-      "NotificationId": "13",
-      "NotificationMsg": "2500rs Donated",
-      "NotificationBody": "Thank you for adding new child.We are happy to see you link this.."
+      "DonationId": "13",
+      "DonationMsg": "2500rs Donated",
+      "DonationBody": "Thank you for adding new child.We are happy to see you link this.."
     },
     {
-      "NotificationId": "14",
-      "NotificationMsg": "3900rs Donated successfully",
-      "NotificationBody": "Thank you for sending your founds again.Thank you for sending sweet gifts to me."
+      "DonationId": "14",
+      "DonationMsg": "3900rs Donated successfully",
+      "DonationBody": "Thank you for sending your founds again.Thank you for sending sweet gifts to me."
     }
   ]
 }

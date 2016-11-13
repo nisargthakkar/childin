@@ -1,17 +1,11 @@
 package com.help.childin.presenters;
 
 import com.google.gson.Gson;
-
-import java.io.IOException;
-import java.util.ArrayList;
-
 import com.help.childin.models.AboutModel;
-import com.help.childin.models.ProductModel;
-import com.help.childin.models.ProductsResponseModel;
 import com.help.childin.ui.fragment.AboutFragment;
 import com.help.childin.utils.Helper;
 
-import static com.help.childin.utils.AppConstants.imageIds;
+import java.io.IOException;
 
 /**
  * Created by ramakrishna on 10/30/16.
@@ -28,7 +22,7 @@ public class AboutPresenter {
     public void loadAboutData(){
         Helper helper = new Helper(aboutFragment.getActivity());
         try {
-            String jsonString = helper.loadJsonFromAssets("ayursha_contact.json");
+            String jsonString = helper.loadJsonFromAssets("about_us.json");
             Gson gson = new Gson();
             AboutModel aboutModel = gson.fromJson(jsonString, AboutModel.class);
             if (aboutModel != null ){

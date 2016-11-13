@@ -8,7 +8,7 @@ import com.help.childin.R;
 
 public class AppConstants {
 
-    public static final String EXTRA_PRODUCT_MODEL= "product model";
+    public static final String EXTRA_PRODUCT_MODEL = "product model";
     public static final String EXTRA_STORY_NAME = "story name";
 
     public static int[] imageIds = {R.drawable.img_hair_pack,
@@ -23,4 +23,12 @@ public class AppConstants {
     public static final double Lon = 80.6129955;
 
     public static final String YOUTUBE_API_KEY = "AIzaSyCODEEWsKEKrWf2LUQunhtco4WGJWshM6Y";
+
+    public static final String IMG_URL = "http://goo.gl/gEgYUd";
+
+    public static final String ROOT_URL = "";
+    public static final String DONOR_REG = "";
+    public static final String DONOR_LOGIN = "";
+    public static final String CHILD_LIST = "";
+
 }

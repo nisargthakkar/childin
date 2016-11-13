@@ -1,54 +1,34 @@
 package com.help.childin.ui.fragment;
 
 import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
+import android.widget.ImageView;
 import android.widget.TextView;
 
-import butterknife.BindView;
-import butterknife.BindViews;
-import butterknife.ButterKnife;
+import com.bumptech.glide.Glide;
 import com.help.childin.R;
 import com.help.childin.models.AboutModel;
 import com.help.childin.presenters.AboutPresenter;
-import com.help.childin.utils.AppConstants;
 import com.help.childin.utils.Helper;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class AboutFragment extends Fragment {
 
 	private OnFragmentInteractionListener listener;
 	AboutPresenter aboutPresenter = null;
 
-	@BindView(R.id.txt_name)
-	TextView txtName;
+	@BindView(R.id.txt_content)
+	TextView txtContent;
 
-	@BindView(R.id.txt_address)
-	TextView txtAddress;
-
-	@BindView(R.id.txt_mobile)
-	TextView txtMobile;
-
-	@BindView(R.id.txt_fb_url)
-	TextView txtFbName;
-
-	@BindView(R.id.layout_fb_url)
-	LinearLayout layoutFbUrl;
-
-	@BindView(R.id.layout_call)
-	LinearLayout layoutCall;
-
-	@BindView(R.id.layout_address)
-	LinearLayout layoutAddress;
-
-	AboutModel aboutModel = null;
+	@BindView(R.id.img_content)
+	ImageView imgContent;
 
 
 	public static AboutFragment newInstance() {
@@ -73,37 +53,6 @@ public class AboutFragment extends Fragment {
 	public void onActivityCreated(@Nullable Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
 		aboutPresenter.loadAboutData();
-
-		layoutFbUrl.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View view) {
-				if (aboutModel != null){
-					Intent fbIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(aboutModel.fburl));
-					startActivity(fbIntent);
-				}
-			}
-		});
-
-		layoutCall.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View view) {
-				if (aboutModel != null){
-					Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + aboutModel.phone));
-					startActivity(intent);
-				}
-			}
-		});
-
-		layoutAddress.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View view) {
-				if (aboutModel != null){
-					Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
-							Uri.parse("http://maps.google.com/maps?daddr="+AppConstants.Lat+","+AppConstants.Lon));
-					startActivity(intent);
-				}
-			}
-		});
 	}
 
 	@Override
@@ -124,16 +73,9 @@ public class AboutFragment extends Fragment {
 	}
 
 	public void onAboutDataReceived(AboutModel aboutModel) {
-		txtName.setTypeface(Helper.getMyTypeFace(getActivity()));
-		txtAddress.setTypeface(Helper.getMyTypeFace(getActivity()));
-		txtMobile.setTypeface(Helper.getMyTypeFace(getActivity()));
-		txtFbName.setTypeface(Helper.getMyTypeFace(getActivity()));
-
-		this.aboutModel = aboutModel;
-		txtName.setText(aboutModel.name);
-		txtAddress.setText(aboutModel.address);
-		txtMobile.setText(aboutModel.phone);
-		txtFbName.setText(aboutModel.fbname);
+		txtContent.setTypeface(Helper.getMyTypeFace(getActivity()));
+		Glide.with(this).load(aboutModel.imgUrl).into(imgContent);
+        txtContent.setText(aboutModel.aboutUsContent);
 	}
 
 	public interface OnFragmentInteractionListener {
