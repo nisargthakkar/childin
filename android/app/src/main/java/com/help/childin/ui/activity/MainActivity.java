@@ -12,20 +12,23 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 import com.help.childin.R;
 import com.help.childin.ui.fragment.AboutFragment;
 import com.help.childin.ui.fragment.HomeFragment;
 import com.help.childin.ui.fragment.MyDonationFragment;
 import com.help.childin.ui.fragment.NotificationFragment;
+import com.help.childin.utils.Helper;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity implements HomeFragment.OnFragmentInteractionListener,
 		NotificationFragment.OnFragmentInteractionListener,MyDonationFragment.OnFragmentInteractionListener,
-        AboutFragment.OnFragmentInteractionListener
-		{
+        AboutFragment.OnFragmentInteractionListener{
+
+	//NotificationFragment.OnFragmentInteractionListener,MyDonationFragment.OnFragmentInteractionListener{
 
 	@BindView(R.id.toolbar)
     Toolbar toolbar;
@@ -52,6 +55,7 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnFr
 	// flag to load home fragment when user presses back key
 	private boolean shouldLoadHomeFragOnBackPress = true;
 	private Handler mHandler;
+
 
 
 	@Override
@@ -149,6 +153,15 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnFr
 
 	private void setUpNavigationView() {
 		//Setting Navigation View Item Selected Listener to handle the item click of the navigation menu
+
+		/*textViewNavDonate = (TextView) navigationView.findViewById(R.id.txt_donate_now);
+		textViewNavDonate.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				Helper.gotoDonoteLink(getApplicationContext());
+			}
+		});*/
+
 		navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
 
 			// This method will trigger on item Click of navigation menu

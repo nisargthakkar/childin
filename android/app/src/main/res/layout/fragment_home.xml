@@ -1,32 +1,144 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-			 xmlns:tools="http://schemas.android.com/tools"
-			 android:layout_width="match_parent"
-			 android:layout_height="match_parent"
-             android:orientation="vertical"
-	android:background="@color/window_bg"
-			 tools:context="com.help.childin.ui.fragment.HomeFragment">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context="com.help.childin.ui.fragment.HomeFragment">
 
-    <LinearLayout
-		android:layout_width="match_parent"
-		android:layout_height="100dp"
-		android:weightSum="2"
-		android:orientation="horizontal">
-		<TextView
-			android:layout_weight="1"
-			android:layout_width="0dp"
-			android:layout_height="wrap_content"
-			android:drawableTop="@drawable/ic_notifications_black_24dp"
-			android:drawableTint="@color/colorPrimary"
-			android:text="@string/notifications"/>
 
-		<TextView
-			android:layout_weight="1"
-			android:layout_width="0dp"
-			android:layout_height="wrap_content"
-			android:drawableTop="@drawable/ic_my_donations_black_24dp"
-			android:drawableTint="@color/colorPrimary"
-			android:text="@string/my_donations"/>
+    <LinearLayout android:id="@+id/llTop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center|center_vertical"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
 
-	</LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:orientation="horizontal"
+            tools:ignore="DisableBaselineAlignment">
 
-</LinearLayout>
+            <LinearLayout
+                android:id="@+id/llNotifications"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:orientation="vertical"
+                android:background="#03A9F4"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                tools:ignore="NestedWeights">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center|center_vertical"
+                    android:src="@drawable/ic_notifications_black_24dp"
+                    tools:ignore="ContentDescription" />
+
+                <TextView android:id="@+id/textViewNotifications"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/notifications"
+                    android:textSize="@dimen/textsize1"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llDonations"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:background="#00796B"
+                android:layout_weight="1.0"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center|center_vertical"
+                    android:src="@drawable/ic_my_donations_black_24dp"
+                    tools:ignore="ContentDescription" />
+
+                <TextView android:id="@+id/textViewDonations"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="@dimen/textsize1"
+                    android:text="@string/my_donations" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="#CDDC39"
+                android:clickable="true"
+                android:gravity="center"
+                tools:ignore="UselessParent"
+                android:id="@+id/llChildren">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center|center_vertical"
+                    android:src="@drawable/ic_children"
+                    tools:ignore="ContentDescription" />
+
+                <TextView android:id="@+id/textViewMyChildren"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="@dimen/textsize1"
+                    android:text="@string/my_children" />
+
+            </LinearLayout>
+
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:orientation="vertical"-->
+                <!--android:background="@android:color/white"-->
+                <!--android:layout_weight="1.0"-->
+                <!--android:gravity="center"-->
+                <!--android:visibility="invisible">-->
+
+                <!--<ImageView-->
+                    <!--android:layout_width="48dp"-->
+                    <!--android:layout_height="48dp"-->
+                    <!--android:padding="10dp"-->
+                    <!--android:layout_gravity="center|center_vertical"-->
+                    <!--android:src="@drawable/ic_my_donations_black_24dp"/>-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="@string/my_donations" />-->
+
+            <!--</LinearLayout>-->
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

@@ -54,6 +54,7 @@
             android:maxLines="1"
             android:textColor="@color/colorPrimaryText"
             android:text="@string/donate_now"
+            android:visibility="gone"
             android:background="@drawable/bg_corner_rectangle"/>
 
     </LinearLayout>

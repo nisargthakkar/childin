@@ -1,7 +1,11 @@
 package com.help.childin.utils;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Typeface;
+
+import com.help.childin.ui.activity.DonorActivity;
+import com.help.childin.ui.activity.MainActivity;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -65,6 +69,12 @@ public class Helper {
         return new Retrofit.Builder()
                 .baseUrl(AppConstants.ROOT_URL)
                 .build();
+    }
+
+
+    public static void gotoDonoteLink(Context context){
+//        Intent i = new Intent(context, MainActivity.class);
+//        startActivity(i);
     }
 
 }
